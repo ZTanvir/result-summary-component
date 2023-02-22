@@ -96,11 +96,14 @@ body {
   font-size: 1.125rem;
   font-family: var(--ff-hanken, "sans-sarif");
 }
+
 .result {
   display: grid;
-  --result--padding: 1rem;
-  --content--spaceing: 1.5rem;
+  --result--padding: 2rem;
+  --content--spaceing: 1rem;
+  margin: 1rem;
 }
+
 .result__average {
   display: grid;
   gap: var(--content--spaceing);
@@ -112,21 +115,44 @@ body {
     rgba(120, 87, 255, 1) 100%
   );
 }
+
 .result__avg-number {
-  background: var(--light-royal-blue, rgb(46, 43, 233));
+  background: rgb(70, 51, 239);
+  background: linear-gradient(
+    0deg,
+    rgba(70, 51, 239, 1) 0%,
+    rgba(74, 35, 201, 1) 100%
+  );
+
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 12rem;
+  width: 12rem;
   display: grid;
   place-items: center;
 }
 
 .result__point {
   font-size: 5rem;
-  color: var(--white);
+  height: 6rem;
+  font-weight: var(--fw--bolder);
 }
 
 .result__total {
   display: flex;
   justify-content: center;
+}
+
+.result__msg {
+  text-align: center;
+}
+
+:is(.result__greeting, .result__text) {
+  font-size: 1.5rem;
+}
+
+:is(.result__text, .result__total, .result__msg) {
+  color: var(--light-lavender);
+}
+:is(.result__point, .result__greeting) {
+  color: var(--white);
 }
