@@ -99,25 +99,34 @@ body {
 .result {
   display: grid;
   --result--padding: 1rem;
+  --content--spaceing: 1.5rem;
 }
 .result__average {
+  display: grid;
+  gap: var(--content--spaceing);
+  justify-items: center;
   padding: var(--result--padding);
   background: linear-gradient(
     0deg,
     rgba(46, 43, 233, 1) 0%,
     rgba(120, 87, 255, 1) 100%
   );
-  display: grid;
-  justify-items: center;
 }
 .result__avg-number {
   background: var(--light-royal-blue, rgb(46, 43, 233));
-
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  display: grid;
+  place-items: center;
 }
+
 .result__point {
   font-size: 5rem;
   color: var(--white);
+}
+
+.result__total {
+  display: flex;
+  justify-content: center;
 }
