@@ -159,3 +159,5 @@ body {
 :is(.result__point, .result__greeting) {
   color: var(--white);
 }
+
+/* result summary */
