@@ -1,8 +1,12 @@
 :root {
   --light-red: hsl(0, 100%, 67%);
+  --soft-red: hsl(6, 100%, 98%);
   --orangey-yellow: hsl(39, 100%, 56%);
+  --soft-yellow: hsl(42, 100%, 97%);
   --green-teal: hsl(166, 100%, 37%);
+  --soft-teal: hsl(173, 53%, 97%);
   --cobalt-blue: hsl(234, 85%, 45%);
+  --soft-blue: hsl(240, 71%, 97%);
 
   --light-slate-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
@@ -161,3 +165,19 @@ body {
 }
 
 /* result summary */
+.result__summary {
+  display: grid;
+  padding: var(--result--padding);
+  gap: var(--content--spaceing);
+  background-color: var(--white);
+}
+:is(.result__reaction, .result__memory, .result__verbal, .result__visual) {
+  display: flex;
+  justify-content: space-between;
+}
+.result__reaction {
+  background-color: #fff6f5;
+  color: var(--light-red);
+  padding: 1rem;
+  border-radius: 1rem;
+}
