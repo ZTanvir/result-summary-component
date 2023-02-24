@@ -174,10 +174,20 @@ body {
 :is(.result__reaction, .result__memory, .result__verbal, .result__visual) {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .result__reaction {
   background-color: #fff6f5;
   color: var(--light-red);
   padding: 1rem;
   border-radius: 1rem;
+}
+span[data-icon="result__reaction-icon"]::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-image: url(../images/icons/icon-memory.svg);
+  background-repeat: none;
+  display: inline-block;
+  margin-right: 1rem;
 }
