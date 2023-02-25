@@ -152,7 +152,9 @@ body {
 .result__msg {
   text-align: center;
 }
-
+.result__greeting {
+  font-weight: var(--fw-bold);
+}
 :is(.result__greeting, .result__text) {
   font-size: 1.5rem;
 }
@@ -215,4 +217,46 @@ span[data-icon="result__verbal-icon"]::before {
 }
 span[data-icon="result__visual-icon"]::before {
   background-image: url(../images/icons/icon-visual.svg);
+}
+
+.result__your-point {
+  color: var(--dark-gray-blue);
+}
+.result__out-of {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+:is(.result__out-of, .result__total-point) {
+  color: #9496a4;
+}
+.result__btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  overflow: hidden;
+  color: var(--white);
+  background: rgb(70, 51, 239);
+  background: linear-gradient(
+    0deg,
+    rgba(70, 51, 239, 1) 0%,
+    rgba(74, 35, 201, 1) 100%
+  );
+  margin-top: 1.5rem;
+}
+.result__btn:is(:hover, :focus) {
+  cursor: pointer;
+}
+:is(
+    .result__verbal--text,
+    .result__reaction--text,
+    .result__memory--text,
+    .result__visual--text
+  ) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
