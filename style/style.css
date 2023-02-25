@@ -175,19 +175,44 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.result__reaction {
-  background-color: #fff6f5;
-  color: var(--light-red);
   padding: 1rem;
   border-radius: 1rem;
 }
-span[data-icon="result__reaction-icon"]::before {
+span[data-icon$="icon"]::before {
   content: "";
   height: 20px;
   width: 20px;
-  background-image: url(../images/icons/icon-memory.svg);
-  background-repeat: none;
+  background-repeat: no-repeat;
   display: inline-block;
   margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+.result__reaction {
+  background-color: var(--soft-red);
+  color: var(--light-red);
+}
+
+span[data-icon="result__reaction-icon"]::before {
+  background-image: url(../images/icons/icon-reaction.svg);
+}
+.result__memory {
+  background-color: var(--soft-yellow);
+  color: var(--orangey-yellow);
+}
+span[data-icon="result__memory-icon"]::before {
+  background-image: url(../images/icons/icon-memory.svg);
+}
+.result__verbal {
+  background-color: var(--soft-teal);
+  color: var(--green-teal);
+}
+span[data-icon="result__verbal-icon"]::before {
+  background-image: url(../images/icons/icon-verbal.svg);
+}
+.result__visual {
+  background-color: var(--soft-blue);
+  color: var(--cobalt-blue);
+}
+span[data-icon="result__visual-icon"]::before {
+  background-image: url(../images/icons/icon-visual.svg);
 }
