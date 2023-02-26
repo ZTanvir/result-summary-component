@@ -95,12 +95,11 @@ h6 {
 
 body {
   display: grid;
-  place-items: center;
   background-color: var(--white, white);
   font-size: 1.125rem;
   font-family: var(--ff-hanken, "sans-sarif");
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .result {
@@ -266,7 +265,10 @@ span[data-icon="result__visual-icon"]::before {
   justify-content: center;
   align-items: center;
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 600px) {
+  body {
+    place-items: center;
+  }
   .result {
     max-width: 800px;
     grid-template-columns: 1fr 1fr;
