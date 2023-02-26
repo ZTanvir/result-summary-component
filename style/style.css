@@ -239,16 +239,17 @@ span[data-icon="result__visual-icon"]::before {
   border: none;
   overflow: hidden;
   color: var(--white);
+  background-color: var(--dark-gray-blue);
+  margin-top: 1.5rem;
+}
+.result__btn:is(:hover, :focus) {
+  cursor: pointer;
   background: rgb(70, 51, 239);
   background: linear-gradient(
     0deg,
     rgba(70, 51, 239, 1) 0%,
     rgba(74, 35, 201, 1) 100%
   );
-  margin-top: 1.5rem;
-}
-.result__btn:is(:hover, :focus) {
-  cursor: pointer;
 }
 :is(
     .result__verbal--text,
